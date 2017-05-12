@@ -12,6 +12,7 @@
 		B1A7A7F71EC37C2A003A184E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A7A7F51EC37C2A003A184E /* Main.storyboard */; };
 		B1A7A7F91EC37C2A003A184E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A7A7F81EC37C2A003A184E /* Assets.xcassets */; };
 		B1A7A7FC1EC37C2A003A184E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A7A7FA1EC37C2A003A184E /* LaunchScreen.storyboard */; };
+		B1A7A8041EC4034E003A184E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1A7A8031EC4034E003A184E /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B1A7A7F81EC37C2A003A184E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1A7A7FB1EC37C2A003A184E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1A7A7FD1EC37C2A003A184E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1A7A8031EC4034E003A184E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		B1A7A7E51EC37C2A003A184E = {
 			isa = PBXGroup;
 			children = (
+				B1A7A8031EC4034E003A184E /* Default-568h@2x.png */,
 				B1A7A7F01EC37C2A003A184E /* Whats The Weather */,
 				B1A7A7EF1EC37C2A003A184E /* Products */,
 			);
@@ -96,7 +99,6 @@
 				TargetAttributes = {
 					B1A7A7ED1EC37C2A003A184E = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = ZCB56VJ649;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A7A7FC1EC37C2A003A184E /* LaunchScreen.storyboard in Resources */,
+				B1A7A8041EC4034E003A184E /* Default-568h@2x.png in Resources */,
 				B1A7A7F91EC37C2A003A184E /* Assets.xcassets in Resources */,
 				B1A7A7F71EC37C2A003A184E /* Main.storyboard in Resources */,
 			);
@@ -263,7 +266,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZCB56VJ649;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Whats The Weather/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evkorg.Whats-The-Weather";
@@ -276,7 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZCB56VJ649;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Whats The Weather/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evkorg.Whats-The-Weather";

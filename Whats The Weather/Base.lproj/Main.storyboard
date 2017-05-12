@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whats_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="BsO-05-3lu">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkd-P5-XDZ">
+                                <rect key="frame" x="58.5" y="60" width="258" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHq-sJ-WTp">
+                                <rect key="frame" x="129.5" y="126" width="115.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g., London, Madrid" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zeg-Dn-MNv">
+                                <rect key="frame" x="16" y="177" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlO-wS-Zin">
+                                <rect key="frame" x="163" y="227" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5MA-Nh-5Js"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1f-Gk-IGN">
+                                <rect key="frame" x="16" y="287" width="343" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="yrr-Ab-1NM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BsO-05-3lu" secondAttribute="bottom" id="0vf-12-fV1"/>
+                            <constraint firstItem="Zeg-Dn-MNv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1JQ-In-7lR"/>
+                            <constraint firstItem="Tkd-P5-XDZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="2aw-cB-Bhw"/>
+                            <constraint firstItem="Z1f-Gk-IGN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6LJ-WP-tbX"/>
+                            <constraint firstItem="YlO-wS-Zin" firstAttribute="top" secondItem="Zeg-Dn-MNv" secondAttribute="bottom" constant="20" id="9CX-4d-Y3g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z1f-Gk-IGN" secondAttribute="trailing" id="CJz-s9-gCO"/>
+                            <constraint firstItem="BsO-05-3lu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Cw8-V4-gBB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zeg-Dn-MNv" secondAttribute="trailing" id="DGA-HO-thG"/>
+                            <constraint firstItem="Tkd-P5-XDZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IkV-4O-QTT"/>
+                            <constraint firstItem="BsO-05-3lu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SPa-5v-BP4"/>
+                            <constraint firstItem="Zeg-Dn-MNv" firstAttribute="top" secondItem="iHq-sJ-WTp" secondAttribute="bottom" constant="30" id="a8f-PJ-wIq"/>
+                            <constraint firstItem="iHq-sJ-WTp" firstAttribute="top" secondItem="Tkd-P5-XDZ" secondAttribute="bottom" constant="30" id="ebE-3c-QyY"/>
+                            <constraint firstItem="Z1f-Gk-IGN" firstAttribute="top" secondItem="YlO-wS-Zin" secondAttribute="bottom" constant="30" id="gLk-4p-NNV"/>
+                            <constraint firstItem="Zeg-Dn-MNv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mPk-JX-01K"/>
+                            <constraint firstItem="Z1f-Gk-IGN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nOs-TS-Hut"/>
+                            <constraint firstItem="iHq-sJ-WTp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rGr-kq-AgF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BsO-05-3lu" secondAttribute="trailing" id="ufb-LP-BXp"/>
+                            <constraint firstItem="YlO-wS-Zin" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whx-RX-n6X"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="Zeg-Dn-MNv" id="EZZ-6a-kfR"/>
+                        <outlet property="forecastTextField" destination="Z1f-Gk-IGN" id="cIg-eT-TMm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1000" height="647"/>
+    </resources>
 </document>
